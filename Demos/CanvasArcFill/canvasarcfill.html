@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Canvas Arc Fill</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Arc Fill</h1>
+
+    <canvas id="canvas1"></canvas>
+
+    <script>
+        // create canvas
+        const canvas1 = window.document.querySelector('#canvas1');
+
+        const ctx = canvas1.getContext('2d');
+
+        // Configure Canvas
+        canvas1.width = 800;
+        canvas1.height = 400;
+        canvas1.style.border = '1px solid black';
+        canvas1.style.backgroundColor = "brown"
+        
+
+        //draw circle
+        ctx.strokeStyle = 'gold' ;
+        ctx.fillStyle = 'tomato';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 200, 75, 0, 6.28);
+        ctx.fill();
+        ctx.stroke();
+
+    </script>
+
+
+
+
+</body>
+</html>
