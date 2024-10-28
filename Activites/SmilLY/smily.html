@@ -34,10 +34,48 @@
         ctx.fill();
         ctx.closePath();
 
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = 'black';
         ctx.beginPath();
-        ctx.arc(400, 290, 20, 20, 0, 1);
+        ctx.arc(300, 200, 40, 40, 0, 1);
         ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(300, 200, 10, 10, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(500, 200, 40, 40, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(500, 200, 10, 10, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 350, 100 ,0,  3.14, false);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+        
+//attempt at drawing line, 
+// Just close path first then add stroke to close the arc  
+        // ctx.strokeStyle = 'black';
+        // ctx.lineWidth = 10;
+        // ctx.beginPath();
+        // ctx.moveTo(0, 0);
+        // ctx.lineTo(400, 350);
+        // ctx.stroke();
+        // ctx.closePath();
 
 
 
