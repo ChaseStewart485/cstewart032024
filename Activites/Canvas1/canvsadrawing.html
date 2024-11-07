@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Drawing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin-top: 50px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #canvas {
+        margin: auto;
+        display: block;
+        border: 1px solid silver;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Canvas Drawing 1</h1>
+    <canvas id="canvas" width="1000px" height="500px"></canvas>
+
+    <script>
+      // Create variables
+      const canvas = window.document.querySelector('#canvas');
+      const ctx = canvas.getContext('2d');
+
+      canvas.style.backgroundColor = 'lightblue';
+
+      
+
+      //oranges 
+      ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(400, 290, 54, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+      ctx.fillStyle = 'orange';
+        ctx.beginPath();
+        ctx.arc(400, 290, 50, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+      
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(300, 290, 54, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = 'orange';
+        ctx.beginPath();
+        ctx.arc(300, 290, 50, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(350, 210, 54, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+      
+        ctx.fillStyle = 'orange';
+        ctx.beginPath();
+        ctx.arc(350, 210, 50, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+      
+      ctx.fillStyle = 'brown'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'sienna';
+        ctx.beginPath();
+        ctx.moveTo(460,200);
+        ctx.lineTo(240,200);
+        ctx.stroke();
+        ctx.closePath();
+      
+      ctx.fillStyle = 'brown'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'sienna';
+        ctx.beginPath();
+        ctx.moveTo(240,250);
+        ctx.lineTo(460,250);
+        ctx.stroke();
+        ctx.closePath();
+      
+      ctx.fillStyle = 'brown'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'sienna';
+        ctx.beginPath();
+        ctx.moveTo(240,295);
+        ctx.lineTo(460,295);
+        ctx.stroke();
+        ctx.closePath();
+
+        // floor of crate 
+      ctx.fillStyle = 'brown'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'sienna';
+        ctx.beginPath();
+        ctx.moveTo(240,345);
+        ctx.lineTo(460,345);
+        ctx.stroke();
+        ctx.closePath();
+      
+        // Sides 
+      ctx.fillStyle = 'brown'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'sienna';
+        ctx.beginPath();
+        ctx.moveTo(455,345);
+        ctx.lineTo(455,195);
+        ctx.stroke();
+        ctx.closePath();
+      
+      ctx.fillStyle = 'brown'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'sienna';
+        ctx.beginPath();
+        ctx.moveTo(245,345);
+        ctx.lineTo(245,195);
+        ctx.stroke();
+        ctx.closePath();
+
+
+        // Human Named BOB
+      ctx.lineWidth = 10;
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(650, 250);
+        ctx.lineTo(570, 400);
+        ctx.stroke();
+        ctx.closePath();
+      
+      ctx.lineWidth = 10;
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(650, 250);
+        ctx.lineTo(730, 400);
+        ctx.stroke();
+        ctx.closePath();
+      
+        //body
+      ctx.lineWidth = 10;
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(650, 90);
+        ctx.lineTo(650, 260);
+        ctx.stroke();
+        ctx.closePath();
+
+        //arms
+      ctx.lineWidth =10;
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(650,120);
+        ctx.lineTo(570, 200);
+        ctx.stroke();
+        ctx.closePath();
+      ctx.lineWidth =10;
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(740,190);
+        ctx.lineTo(650, 120);
+        ctx.stroke();
+        ctx.closePath();
+
+        //head
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(650, 60, 50, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+      
+        
+
+      
+        
+
+
+      
+
+
+
+    </script>
+  </body>
+</html>
