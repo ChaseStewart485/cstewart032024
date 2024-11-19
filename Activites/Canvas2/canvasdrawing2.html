@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Canvas Drawing 2</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+        margin-top: 50px;
+        background-color: dimgray;
+        color:white;
+        text-shadow: 2px 3px 3px black;
+        }
+    h1 {
+        text-align: center;
+        }
+    #canvas {
+        margin: auto;
+        display: block;
+        border: 2px solid silver;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Canvas Drawing</h1>
+        <canvas id="canvas" width="1000px" height="600px"></canvas>
+
+    <script>
+      // Create variables
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.style.backgroundColor = 'rgb(25,124,199)';
+
+
+        //sun
+        ctx.fillStyle = 'rgb(249,127,0)';
+        ctx.arc(700, 90, 104, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+        //biggest Mountain
+        ctx.fillStyle = 'rgb(131, 67, 51';
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'rgb(131, 67, 51';
+        ctx.beginPath();
+        ctx.moveTo(194, 20);
+        ctx.lineTo(1145, 840);
+        ctx.lineTo(-610, 800);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        //Smallest Mountain
+        //work in progress 
+        ctx.fillStyle = 'rgb(205, 127, 50)';
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'rgb(205, 127, 50)';
+        ctx.beginPath();
+        ctx.moveTo(910, 203);
+        ctx.lineTo(560,600);
+        ctx.lineTo(900, 600);
+        ctx.lineTo(1300, 600);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        //smallest mountain peak 
+        ctx.fillStyle = 'rgb(176,225,236)';
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'rgb(176,225,236)';
+        ctx.beginPath();
+        ctx.moveTo(900, 200);
+        ctx.lineTo(1010,300);
+        ctx.lineTo(980, 290);
+        ctx.lineTo(950, 310);
+        ctx.lineTo(920, 280);
+        ctx.lineTo(890, 320);
+        ctx.lineTo(860, 290);
+        ctx.lineTo(790, 320);
+        ctx.lineTo(906, 200);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        //Mountain Under sun 
+        ctx.fillStyle = 'brown';
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'brown';
+        ctx.beginPath();
+        ctx.moveTo(648,125);
+        ctx.lineTo(25,645);
+        ctx.lineTo(2500, 2000);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        //Big mountain next to mid mountain TOP
+        ctx.fillStyle = 'rgb(176,225,236)';
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'rgb(176,225,236)';
+        ctx.beginPath();
+        ctx.moveTo(200, 20);
+        ctx.lineTo(10, 200);
+        ctx.lineTo(100, 180);
+        ctx.lineTo(200, 210);
+        ctx.lineTo(250, 160);
+        ctx.lineTo(300, 200);
+        ctx.lineTo(350, 170);
+        ctx.lineTo(400, 198);
+        ctx.lineTo(194, 20);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        //peak under sun 
+        ctx.fillStyle = 'rgb(176,225,236)'
+        ctx.lineWidth =10;
+        ctx.strokeStyle = 'rgb(176,225,236)';
+        ctx.beginPath();
+        ctx.moveTo(640,125);
+        ctx.lineTo(760,245);
+        ctx.lineTo(660, 210);
+        ctx.lineTo(630, 240);
+        ctx.lineTo(590, 210);
+        ctx.lineTo(560, 230);
+        ctx.lineTo(510, 240);
+        ctx.lineTo(648, 125);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+    </script>
+    </body>
+</html>

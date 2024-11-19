@@ -1,3 +1,5 @@
 {
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "workbench.externalBrowser": "chrome"
 }
