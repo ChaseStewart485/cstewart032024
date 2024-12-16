@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Objects - JS</title>
+</head>
+<body>
+    <h1>Dog Objects</h1>
+
+
+    <script>
+    // All objects have properties and metheds
+        // Window object
+        // window.innerWidth is a property
+        // window.alert(); is a method of the window object
+        // document object
+        // document.title is a property
+        // document.write is a method 
+
+        /* 
+        Methods and functions are the same thing 
+        Methods are functions that are for a specfic object
+        */
+
+
+        // Creating custon objects
+        //dog Object
+        const DOG = {
+            name: 'Trejo',
+            age:69,
+            color:'black',
+            size:'BIG Boi',
+            eyecolor:'brown',
+            isAlive: true,
+            isHappy:false,
+            image: '<img src="Images/dog.png">',
+            bark: function(){return 'bark!'},
+            dig:function(){return 'diging'},
+            growl:function(){return 'growling GRRRRRRRRRRRRR'}
+        }
+
+        //examine the dog 
+        window.document.write(DOG.name + '<br>');
+        window.document.write(DOG.age + '<br>');
+        window.document.write(DOG.color + '<br>');
+        window.document.write(DOG.size + '<br>');
+        window.document.write(DOG.eyecolor + '<br>');
+        window.document.write(DOG.isAlive + '<br>');
+        window.document.write(DOG.isHappy + '<br>');
+        window.document.write(DOG.image + '<br>');
+        window.document.write(DOG.bark() + '<br>');
+        window.document.write(DOG.dig() + '<br>');
+        window.document.write(DOG.growl() + '<br>');
+
+</script>
+
+
+</body>
+</html>
