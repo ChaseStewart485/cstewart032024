@@ -16,21 +16,26 @@
             left:0;
         }
         #menu{
-            background-color: silver;
-            border:2px solid #333;
+            background-color:#9e7c4f;
+            border:4px solid #b35120;
             height:60px;
             width: 100%;
             position: fixed;
             bottom:0;
-            padding:1rem;
+            padding: 10px;
             display: flex;
         }
         div{
-            padding:20px;
+            justify-content: space-evenly;
+            padding-left: 20px;
         }
         img{
             width:35px;
-            height:35px;
+            
+        }
+        #rangepicker{
+            justify-content: space-around;
+            padding-right:10px;
         }
     </style>
 </head>
@@ -40,8 +45,8 @@
     </canvas>
 
     <section id="menu">
-        <input type="color" id="colorpicker" value="#ff0000">
-        <input type="range" id="rangepicker" min="5" max="100" value="15">
+        <input type="color" id="colorpicker" value="#703010">
+        <input type="range" id="rangepicker" min="5" max="100" value="1">
         <div id="erase"><img src="Images/eraser.png" alt="eraser - erase your drawing"></div>
         <div id="clear"><img src="Images/bin.png" alt="trash can - clear your canvas"></div>
         <div id="undo"><img src="Images/undo Background Removed.png" alt="undo - undo laststroke"></div>
@@ -50,10 +55,11 @@
 
     <script>
         //create Javascript Variables
-        let canvasColor = "#fff"; // to be used on eraser
-        let brushColor = "#ff0000"; // default brush color
+        let canvasColor = "#deb887"; // to be used on eraser
+        let brushColor = "#703010"; // default brush color
         let painting = false; 
-        let brushSize = 15; 
+        let brushSize = 1; 
+        let canvasData; 
 
         // Canvas Drawing Variables
         let lineJoinStyle = "round";
@@ -106,7 +112,6 @@
         UNDO.addEventListener('click', function(){alert('Undo')});
         DOWNLOAD.addEventListener('click', function()
             {
-               
                 let imageData = CANVAS.toDataURL();
                 // alert(imageData) 
                 let link = document.createElement('a');
@@ -149,7 +154,21 @@
 
         CANVAS.addEventListener('mouseup', function(){
             painting = false;
+
+            canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
+            // alert(canvasData);
         });
+
+        window.addEventListener('resize', function()
+        {
+            // alert("THIS Window HAS BEEN RESIZED!!!")
+            CANVAS.width = window.innerWidth;
+            CANVAS.height = window.innerHeight;
+            //Place Canvas Data on Canvas
+            CTX.putImageData(canvasData, 0,0);
+
+        }
+    );
 
         function draw(){
             if(painting == true){
