@@ -276,6 +276,16 @@ margin-top: 20px;
     text-decoration: none;
 }
 
+#btn,#btn2{
+            background-color: silver;
+            border:1px solid black;
+            width:300px;
+            margin:auto;
+            padding: 20px;
+            display:flex;
+            justify-content: space-evenly;
+        }
+
 /* a {
 padding: 1rem;
 } */
@@ -332,6 +342,8 @@ height: 600px;
         <a href="#semester2" id="navlink"> Semester 2  </a>
                 |
         <a href="#keyassignments" id="navlink"> Key Assignments  </a>
+
+        
 
             </nav>
         </div>
@@ -422,6 +434,12 @@ height: 600px;
     <a href="https://coalingahuron.aeries.net/&quot; target="new">aeries</a> |
     <a>chs</a> | <a>mycareertech</a> | <a>classroom</a> | <a>codepip</a> |
     <a>minga</a>
+    <button id="btn">
+            Click me!
+        </button>
+    <button id="btn1">
+            Click me!
+        </button>
 </div>
 </footer>
 <!-- end pagefooter -->
@@ -451,6 +469,21 @@ height: 600px;
 <!-- end subfooter -->
 <div id="top">
     <a href="#topanchor">Top</a>
+
+    <script>
+    const buttonOne = window.document.querySelector('#btn');
+        buttonOne.addEventListener('click', theClick);
+        function theClick() {
+            window.alert('Anthoney has raided your Portfolio :D ');
+            
+        }
+    const buttonTwo = window.document.querySelector('#btn1');
+        buttonTwo.addEventListener('click', theClick);
+        function theClick() {
+            window.alert('This portfolio is no longer safe from Anthoney ASHHAHHAHAHASHSDHKADFGHKbkbjl.qera');
+            
+        }</script>
+    
 </div>
 </body>
 </html>
