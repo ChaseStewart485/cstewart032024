@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <title>Painting App V1</title>
     <style>
         *{
@@ -10,6 +12,18 @@
             margin:0;
             padding:0;
         }
+
+        
+
+        /* mobile Css Adjustments */
+        html{
+            overflow: hidden;
+        }
+
+        #erase, #clear, #undo, #download{
+            touch-action: manipulation;
+        }
+
         #canvas{
             position: absolute;
             top:0;
@@ -150,9 +164,20 @@
             y: undefined,
         };
 
-        // Create Painting events (mousedown, mosemove, mouseup)
-        CANVAS.addEventListener('mousedown', function(e){
+        /*
+        Match mouse events with touch events
+        mousedown/touchstart
+        mousemove/touchmove
+        mouseup/touchend
+        */
+
+// Create Painting events (mousedown, mosemove, mouseup)
+CANVAS.addEventListener('mousedown', function(e){
             painting = true;
+
+
+
+            // console.log(e);
             //Capture X,Y Coords
             MOUSE.x = e.x;
             MOUSE.y = e.y;
@@ -184,26 +209,93 @@
             captureImageData(e);
             
             // alert(canvasData);
-            console.log(canvasData);
+            // console.log(canvasData);
 
             // Prevent unwanted behavior
             CTX.beginPath();
 
         });
 
+        
+
+
+
+
+
+
+
+
+        // TOUCH Events /// 
+        window.document.body.addEventListener('touchmove', function(e)
+        {
+            // Prevent Default Webpage Drag
+            e.preventDefault();
+        } 
+        ,{passive:false});
+
+        // Create Painting events (mousedown, mosemove, mouseup)
+        CANVAS.addEventListener('touchstart', function(e){
+            painting = true;
+
+
+
+            // console.log(e);
+            //Capture X,Y Coords
+            MOUSE.x = e.touches[0].clientX;
+            MOUSE.y = e.touches[0].clientY;
+
+            // Start paitning
+            CTX.beginPath();
+            CTX.moveTo(MOUSE.x, MOUSE.y);
+            
+            // console.log(e);
+        });
+
+        CANVAS.addEventListener('touchmove', function(e){
+            // console.log(MOUSE.x + " " + MOUSE.y);
+            MOUSE.x = e.touches[0].clientX;
+            MOUSE.y = e.touches[0].clientY;
+
+            draw();
+
+        });
+
+        CANVAS.addEventListener('touchend', function(e){
+            painting = false;
+
+            // Prevent defualt behavior
+            e.preventDefault(); // Prevent default behavior
+
+            canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
+
+            captureImageData(e);
+            
+            // alert(canvasData);
+            // console.log(canvasData);
+
+            // Prevent unwanted behavior
+            CTX.beginPath();
+
+        });
+
+        
+
+
+
+
         function captureImageData(e){
-            if(e.type=="mouseup"){
+            if(e.type=="mouseup" || e.type=="touchend" ){
                 // assign data to variable to hold the image data 
                 // canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
                 // console.log(canvasData);
 
                 // Capture the data 
                 undoArray.push(canvasData);
-                console.log(undoArray);
+                // console.log(undoArray);
 
 
                 undoIndex = undoIndex + 1;
-                console.log(undoIndex);
+                // console.log(undoIndex);
 
             }
         }
@@ -238,7 +330,7 @@
             }
             else{
                 undoIndex = undoIndex - 1;
-                console.log(undoIndex);
+                // console.log(undoIndex);
 
                 undoArray.pop();// delete last item in array snapshot 
                 CTX.putImageData(undoArray[undoIndex], 0, 0);
