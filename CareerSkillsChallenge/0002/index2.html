@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* Mobile first design */
+        body{
+            background-color:red;
+            padding:1rem;
+        }
+        #container{
+        max-width: 1200px;
+        background-color: cadetblue;
+        margin:auto;
+        border:1px solid black;
+        }
+        nav{
+            background-color: lavender;
+            min-height: 10px;
+            padding: 1rem;
+            grid-area: nav;
+        }
+        header{
+            background-color: salmon;   
+            min-height: 1rem;
+            padding:1rem;
+            grid-area: header;
+        }
+        div#media{
+            background-color: orange;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:media;
+        }
+        main{
+            background-color: blue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:main;
+        }
+        aside{
+            background-color: brown;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:aside;
+        }
+        footer{
+            background-color: burlywood;
+            min-height: 10px;
+            padding: 1rem;
+            grid-area:footer;
+        }
+        footer#subfooter{
+            background-color: rebeccapurple;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:subfooter;
+        }
+        /* tablet and desktop design */
+        /* media queries */
+        @media screen and (min-width:480px)
+        {
+            body{
+                background-color: blue;
+            }
+            #container{
+                display:grid;
+                grid-template-areas:
+                "header header header header "
+                "nav nav nav nav "
+                "aside media media media "
+                "aside main main main "
+                "footer footer footer footer"
+                "subfooter subfooter subfooter subfooter"
+                ;
+            }
+            header,nav,#media,main,aside,footer,footer#subfooter{
+                margin:0.3rem;
+                padding: 1rem;
+                transition: all 2s;
+        }
+        @media screen and (min-width: 786px)
+        {
+            body{
+                background-color: gold;
+            }
+            #container{
+                display:grid;
+                grid-template-areas:
+                "header header header "
+                "nav nav nav "
+                "main media aside"
+                "main media aside "
+                "footer footer footer"
+                "subfooter subfooter subfooter"
+                ;
+            }
+            header,nav,#media,main,aside,footer,footer#subfooter{
+                margin:0.3rem;
+                padding: 1rem;
+                transition: all 2s;
+            }
+            /* add transition to the grid areas */
+            main, aside, #media{
+                height:450px;
+                text-align: center;
+                color:white;
+                transition: all 2s;
+            }
+        }
+        @media screen and (min-width:1200px)
+        {
+            body{
+                background-color: green;
+            }
+            #container{
+                display: grid;
+                grid-template-areas:
+                "header header header header "
+                "nav nav nav nav "
+                "media media media aside"
+                "main main main aside"
+                "footer footer footer footer"
+                "subfooter subfooter subfooter subfooter"
+                ;
+            }
+            header,nav,#media,main,aside,footer,footer#subfooter{
+                margin:.5rem;
+                padding:1rem;
+            }
+            header{
+                height: 150px;
+            }
+            nav{
+                height:50px;
+            }
+            div#media{
+                height:250px;
+            }
+            main{
+                height:150px;
+            }
+            aside{
+                grid-area: aside;
+                height: auto;
+            }
+            footer{
+                height:50px;
+            }
+            footer#subfooter{
+                height:150px;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <header>Header</header>
+            <nav>Nav</nav>
+            <div id="media">media</div>
+            <main>main</main>
+            <aside>Aside</aside>
+            <footer>Footer</footer>
+            <footer id="subfooter">Subfooter</footer>
+        </div>
+</body> 
+</html>
