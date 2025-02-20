@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Your Own Grid Areas 2</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        #container{
+            background-color: purple;
+            max-width: 1200px;
+            width:80%;
+            margin:auto;
+            padding-top:1rem;
+        }
+        #wrapper{
+            width:80%;
+            margin:auto;
+            padding:1rem;
+        }
+        #pageheader{
+            background-color: orange;
+            grid-area: header;
+            height:250px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #mainnav{
+            background-color: aqua;
+            grid-area: nav;
+            height:50px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #media{
+            background-color: lime;
+            grid-area: media;
+            height:200px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #pagemain{
+            background-color: white;
+            grid-area: main;
+            height:400px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #card001{
+            background-color: coral;
+            grid-area: card001;
+            height:200px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #card002{
+            background-color: lightblue;
+            grid-area: card002;
+            height:200px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #pagefooter{
+            background-color: gold;
+            grid-area: footer;
+            height:50px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+        #subfooter{
+            background-color: silver;   
+            grid-area: subfooter;
+            height:275px;
+            margin: 0.3rem;
+            padding:1rem;
+            border:1px solid black;
+        }
+
+        /* @media screen and (min-width: 768px){
+            #wrapper{
+                display:grid;
+                grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "media media media"
+                "main main main"
+                "card001 card001 card001"
+                "card002 card002 card002"
+                "footer footer footer"
+                "subfooter subfooter subfooter";
+            }
+        } */
+        @media screen and (min-width:768px){
+            #wrapper{
+                display:grid;
+                grid-template-areas:
+                "header header header"
+                "media media media "
+                "nav main main"
+                "nav card001 card002"
+                "footer footer footer "
+                "subfooter subfooter subfooter";
+            }
+            #mainnav{
+                height:644px;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">#pageheader</header>
+            <nav id="mainnav">#mainnav</nav>
+            <div id="media">#media</div>
+            <main id="pagemain">#pagemain</main>
+            <section id="card001">#card001</section>
+            <section id="card002">#card002</section>
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="subfooter">#pagedetails</footer>
+        </div>
+    </div>
+</body>
+</html>
