@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personlized Arrays </title>
+</head>
+<body>
+    <h1>Personlized Arrays</h1>
+    <h2>Pop, Push, Shift, UnShift, forEach, array length&index</h2>
+
+    <script>
+        let myCars;
+        myCars = [];
+
+        myCars[0] = "Ford";
+        myCars[1] = "Honda";
+        myCars[2] = "Totyata";
+        myCars[3] = "BMW";
+        myCars[4] = "Audi";
+        myCars[5] = "Mercedes";
+        myCars[6] = "Lexus";
+        myCars[7] = "Subaru";
+        myCars[8] = "Nissan";
+        myCars[9] = "Kia";
+        myCars[10] = "Hyundai";
+
+        myCars.push = "Chevrolet";
+        myCars.push = "Mazda";
+
+        myCars.pop();
+        myCars.shift();
+        myCars.unshift("Chevy");
+        // myCars.pop();
+
+        console.log(myCars);
+        console.log(myCars.length);
+
+        myCars.forEach( function(cat)
+            {
+                console.log("I love " + cat)
+            } 
+        );
+
+        myCars.forEach( function(c)
+            {
+                console.log("I want to drive a " + c);
+            } 
+        );
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Your Own Grid Area 1 </title>
+    <style>
+        body{
+            background-color: crimson;
+        }
+        #container{
+            background-color: darksalmon;
+            max-width: 1200px;
+            margin:auto;
+            padding:10px;
+        }
+        header,nav,#intromedia,main,aside,#card001,#card002,#card003,footer,footer#subfooter{
+            margin:0.5rem;
+            padding: 1rem;
+        }
+        header{
+            grid-area: header;
+            background-color:brown;
+            height:200px;
+            border:2px solid silver;
+        }
+        nav{
+            grid-area: nav;
+            background-color:darkgoldenrod;
+            height:10px;
+            border:2px solid silver;
+        }
+        #intromedia{
+            grid-area: media;
+            background-color:khaki;
+            height:300px;
+            border:2px solid silver;
+        }
+        main{
+            grid-area: main;
+            background-color:darkkhaki;
+            height:250px;
+            border:2px solid silver;
+        }
+        aside{
+            grid-area: aside;
+            background-color:firebrick;
+            height:150px;
+            border:2px solid silver;
+        }
+        #card001{
+            grid-area: card001;
+            background-color:darkorange;
+            height:100px;
+            border:2px solid silver;
+        }
+        #card002{
+            grid-area: card002;
+            background-color:orange;
+            height:100px;
+            border:2px solid silver;
+        }
+        #card003{
+            grid-area: card003;
+            background-color:orangered;
+            height:100px;
+            border:2px solid silver;
+        }
+        footer{
+            grid-area: footer;
+            background-color:coral;
+            height:150px;
+            border:2px solid silver;
+        }
+        #subfooter{
+            grid-area: subfooter;
+            background-color:burlywood;
+            height:200px;
+            border:2px solid silver;
+        }
+
+@media screen and (min-width: 768px)
+{
+    #container{
+        display:grid;
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "media media media"
+        "main main aside"
+        "card001 card002 card003"
+        "footer footer footer"
+        "subfooter subfooter subfooter";
+    }
+}
+    @media screen and (min-width: 1024px)
+    {
+        #container{
+            display:grid;
+            grid-template-areas:
+            "header header header header header header"
+            "nav nav nav nav nav nav"
+            "media media media media media media"
+            "main main main main aside aside"
+            "card001 card001 card002 card002 card003 card003"
+            "footer footer footer footer footer footer"
+            "subfooter subfooter subfooter subfooter subfooter subfooter";
+        }
+        aside{
+            height:250px;
+        }
+    }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+            <header id="pageheader">#pageheader</header>
+            <nav id="mainnav">#mainnav</nav>
+            <div id="intromedia">#intromedia</div>
+            <main id="pagemain">#pagemain</main>
+            <aside id="pageaside">#pageaside</aside>
+            <div id="card001">#card001</div>
+            <div id="card002">#card002</div>
+            <div id="card003">#card003</div>
+            <footer id="pagefooter">#pagefooter</footer>
+            <footer id="subfooter">#subfooter</footer>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<title>Chase Stewart - Portfolio</title>
+
+<style>
+/* Mobile First Design */
+
+:root{
+    --color-primary: rgb(0, 72, 255);
+    --color-secondary: silver;
+    --color-tertiary: rgb(27, 13, 129);
+}
+
+html {
+scroll-behavior: smooth;
+}
+body{
+    background-image: url(Images/Firefly\ a\ large\ image\ for\ a\ webpage\ that\ is\ a\ scenic\ foerst\ in\ the\ the\ early\ morining\ hours\ 7080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.container {
+/* background-color: white; */
+min-height: 12rem;
+max-width: 75rem;
+padding: 1rem 3rem 1rem 3rem;
+margin: auto;
+position: relative;
+/* border: 1px solid blue; */
+padding:1rem;
+font-size: larger;
+
+
+}
+#pageheader {
+/* background-color: coral; */
+/* background-color: var(--color-primary); */
+min-height: 200px;
+padding: 1rem;
+justify-content: space-between;
+}
+#IMGS{
+    /* background-image: url(Images/Firefly\ a\ large\ image\ for\ a\ webpage\ that\ is\ a\ scenic\ foerst\ in\ the\ the\ early\ morining\ hours\ 7080.jpg);  */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    /* background-image: ; */
+    
+} 
+
+
+
+#logo {
+background-color: rgb(97, 4, 4);
+border:2px solid rgb(171, 29, 29);
+width: 150px;
+height: 150px;
+border-radius: 50%;
+position: absolute;
+left: calc(50% - 75px);
+transition: all 2s;
+
+background-image: url(Images/Firefly-logo-with-sunset-behind-mountain-range\,-with-a-partially-cloudy-sky\,-with-the-name-Chase-888.png);
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+#pagenav {
+/* background-color: rgb(90,127,174); */
+color:white;
+min-height: 40px;
+min-width: 300px;  
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+position: absolute;
+bottom: 0px;
+left: calc(50% - 150px);
+
+/* left: calc(50% - 154px); */
+/* justify-content: space-around; */
+}
+
+#navlink{
+    color:white;
+    text-decoration: none;
+    padding:1.5rem;
+}
+
+#navlink:hover{
+    color:brown;
+}
+
+h1
+{
+opacity: none;
+}
+
+#media {
+/* background-color: var(--color-tertiary); */
+min-height: 300px;
+padding: 0;
+text-align: center;
+/* color:rgba(255, 72, 0, 0.737); */
+text-shadow: 1px -1px 7px rgb(0, 0, 0);
+color:white;
+}
+
+#media h1{
+    text-align: center;
+    font-size: 3rem;
+}
+#media h2{
+    text-align: center;
+}
+#media blockquote{
+    background-color: none;
+    max-width: 50%;
+    margin: auto;
+}
+video{
+    width:50%;
+    height:auto;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border:2px solid darkred;
+    background-color: black;
+}
+
+/* Intro */
+#pagecontent {
+/* background-color: blue; */
+min-height: 200px;
+padding: 1rem;
+color:white;
+text-shadow: -1px 1px 3px grey;
+}
+
+#introtext {
+    text-align: center;
+}
+
+#pagecontent .background{
+    background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+}
+
+#career {
+/* background-color: blue;  */
+min-height: 200px;
+padding: 1rem;
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+
+}
+
+
+#semester1 {
+/* background-color: orange; */
+min-height: 200px;
+padding: 1rem;
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+
+}
+#semester2 {
+/* background-color: orange; */
+min-height: 200px;
+padding: 1rem;
+/*display: none;*/ 
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+}
+
+#keyassignments{
+    min-height: 200px;
+padding: 1rem;
+/* display:none ;  */
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+}
+
+#pagefooter {
+/* background-color: var(--color-primary); */
+min-height: 75px;
+padding: 1rem;
+text-align: center;
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+    background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+
+}
+
+#pagefooter .container {
+min-height: 2rem;
+/* background-color: rgb(187, 206, 212); */
+opacity: 90%;
+text-shadow: 1px 2px 3px rgb(0, 0, 0);
+font-size: large;
+}
+
+#subfooter {
+/* background-color: orange; */
+min-height: 200px;
+background-color: rgba(165, 42, 42, 0.7);
+padding: 1rem;
+color:white;
+/* background-image: url(Images/Firefly\ line\ of\ fish\,\ fresh\ water\ fish\ 59474.jpg); */
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+
+margin-top: 20px;
+
+
+}
+
+.footerlinks{
+    width: 100px;
+    height:100px;
+    display:block;
+    justify-content:center;
+    color:white;
+    position: relative;
+    left:50%;
+}
+
+#subImage {
+    max-width:200px;
+    max-height:200px;
+}
+
+.footerlinks a {
+    color:white;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#top{
+    width:20px;
+    height:20px;
+    background-color:darkred;
+    border:1px solid black;
+    padding:1rem;
+    text-align: center;
+    position: fixed;
+    border-radius: 50%;
+    right:23px;
+    bottom:20px;
+}
+#top a{
+    color:white;
+    text-decoration: none;
+}
+
+#btn,#btn2{
+            background-color: silver;
+            border:1px solid black;
+            width:300px;
+            margin:auto;
+            padding: 20px;
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+/* a {
+padding: 1rem;
+} */
+
+/* Tablet and Desktop Styles */
+/* Use media queries to detect browser window size */
+@media screen and (min-width:768px)
+{
+    #flexsubfooter{
+        display:flex;
+        justify-content: space-between;
+    }
+    .footerlinks{
+        display:block;
+        min-width:200px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+#logo {
+left: 25px;
+}
+#media {
+height: 450px;
+}
+#pagenav {
+top: 0px;
+right: 0px;
+left: auto;
+bottom: auto;
+}
+}
+@media screen and (min-width: 1200px) {
+#media {
+height: 600px;
+    }
+}
+</style>
+    </head>
+<body>
+    <!-- name anchor to navigate to the top of the page -->
+    <a name="topanchor"></a>
+<!-- begin pageheader -->
+    <header id="pageheader">
+        <div class="container" id="IMGS">
+    
+        <a href="https://chasestewart.netlify.app/"><div id="logo"></div></a>
+            <nav id="pagenav">
+        <a href="#career" id="navlink"> Career </a>
+                 |
+        <a href="#semester1" id="navlink"> Semester 1  </a>
+                 |
+        <a href="#semester2" id="navlink"> Semester 2  </a>
+                |
+        <a href="#keyassignments" id="navlink"> Key Assignments  </a>
+
+        
+
+            </nav>
+        </div>
+    </header>
+<!-- end pageheader -->
+
+<!-- begin media -->
+<section id="media">
+    <h1>Chase Stewart</h1>
+        <h3><blockquote>I'm not lazy, I'm just on energy-saving mode - IDK</blockquote></h3>
+    <video src="https://chsserver01.org/2024/cstewart032024/Video/Rain.mp4" controls="controls"></video>
+</section>
+<!-- end media -->
+
+<!-- begin pagecontent -->
+<main id="pagecontent">
+    <div class="background">
+        <h2>Introduction</h2>
+        <h3>Git Clone</h3>
+    <p id="introtext">Hello and welcome to my Portfolio! My name is Chase Stewart, I am a Senior at Coalinga High. I'm currently in my thrid and final year of web Application Devlopment and I hope that this webpage becomes/ is a good relfection of that. Some things that I enjoy is time with Friends, Flim Creation, Photography, Riding My scooter, Taking car of my truck, and Of Course Coding. Some Cool things that I do is that Im a lifeguard and swim Instrutor. Im ranked #11 & #9 in D2 valley, for Butterfly and backstroke. Hope you Enjoy my years worth  of work into this page! </p>
+</div>
+</main>
+<!-- end pagecontent -->
+
+<!-- begin career -->
+        <section id="career">
+            <div class="container">
+                <a name="career"></a>
+                <h2>Career</h2>
+    
+                <ul>
+                    <li>Letter Of Introduction</li>
+                    <li>Resume</li>
+                    <li>Referances</li>
+                    <li>Job Application</li>
+                    <li>Career Plan</li>
+                    <li>Work Samples</li>
+                    <li>Certificates</li>
+                </ul>
+    
+            </div>
+        </section>
+<!-- end career -->
+
+
+
+<!-- begin semester1 -->
+    <section id="semester1">
+        <div class="container">
+        <a name="semester1"></a>
+        <h2>Semester1</h2>
+            <ul>
+                <li><a  target="_blank" href="Activites/SmilLY/smily.html"  >SmiLY Face</a></li>
+                <li><a target="_blank" href="Activites/Canvas1/canvsadrawing.html">Canvas Drawing One</a></li>
+                <li><a target="_blank" href="Activites/Canvas2/canvasdrawing2.html">Canvas Drawing Two</a></li>
+                <li><a target="_blank" href="Activites/JSCustomObjects/objetsfish.html">FEESH</a></li>
+            </ul>
+        </div>
+    </section>
+<!-- end semester1 -->
+
+<!-- begin semester2 -->
+    <section id="semester2">
+        <div class="container">
+        <a name="semester2"></a>
+        <h2>Semester2</h2>
+            <ul>
+                <li><a target="_blank" href="Projects/paintingappv4.html">Painting APP .V4</a></li>
+                <li><a target="_blank" href="Activites/ArraysPersonlized/personlizedarrays.html">Personlized Arrays (cars)</a></li>
+                <li><a target="_blank" href="Projects/paintingappv5.html">Painting App V5</a></li>
+                <li><a target="_blank" href="CareerSkillsChallenge/0002/index2.html">CSS Responsive Grid</a></li>
+                <li><a target="_blank" href="CareerSkillsChallenge/OnYourOwnGridArea1/oyoga1.html">On Your Own Grid Areas 1</a></li>
+                <li><a target="_blank" href="CareerSkillsChallenge/OnYourOwnGridArea2/index.html">On your own Grid Areas #2</a></li>
+                <li><a target="_blank" href="demos/flexBoxList/flexboxlist.html">Flexbox List Responsive</a></li>
+                <li><a target="_blank" href="Demos/FloatedImages/floatediamges.html">Floated Images</a></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+<!-- end semester2 -->
+
+<div id="keyassignments">
+    <div class="container">
+        <a name="keyassignments"></a>
+        <h2>Key Assignments</h2>
+    </div>
+</div>
+
+<!-- begin pagefooter -->
+<footer id="pagefooter">
+<div class="footerlinks">
+    <a target="_blank" href="https://chsserver01.org/">chago</a> | <a target="_blank" href="https://coolors.co/">color schemes</a> |
+    <a target="_blank" href="https://coalingahuron.aeries.net/student/LoginParent.aspx">aeries</a> |
+    <a target="_blank" href="https://chs.chusd.org/">chs</a> | <a target="_blank" href="https://mycareertech.com/">mycareertech</a> | <a target="_blank" href="https://classroom.google.com/">classroom</a> | <a target="_blank" href="https://codepip.com/">codepip</a> |
+    <a target="_blank" href="https://app.minga.io/">minga</a>
+    <button id="btn">
+            Click me!
+        </button>
+    <button id="btn1">
+            Click me!
+        </button>
+</div>
+</footer>
+<!-- end pagefooter -->
+
+<!-- begin subfooter -->
+    <!-- <footer id="subfooter">
+        <div id="container">
+
+
+        <img id="subImage" src="Images/TS-copy copy.jpg" alt="Scooter Logo">
+
+            <div id="flexsubfooter">
+                <div class="footerlinks">
+                    <div><a href="#career">Career</a></div>
+                    <div><a href="#semester1">Semester 1</a></div>
+                    <div><a href="#semester2">Semester 2</a></div>
+                    <div><a href="#keyassignments">Key Assignments</a></div>
+
+                    <!-- fix div with id because flex box -->
+                </div>
+
+            </div>
+        
+        </div>
+    <!-- <div class="container">PageFooter</div> -->
+    </footer> -->
+<!-- end subfooter -->
+<div id="top">
+    <a href="#topanchor">Top</a>
+
+    <script>
+    const buttonOne = window.document.querySelector('#btn');
+        buttonOne.addEventListener('click', theClick);
+        function theClick() {
+            window.alert('Anthoney has raided your Portfolio :D ');
+            
+        }
+    const buttonTwo = window.document.querySelector('#btn1');
+        buttonTwo.addEventListener('click', theClick);
+        function theClick() {
+            window.alert('This portfolio is no longer safe from Anthoney ASHHAHHAHAHASHSDHKADFGHKbkbjl.qera');
+            
+        }</script>
+    
+</div>
+</body>
+</html>

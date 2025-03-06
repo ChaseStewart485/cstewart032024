@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmiLY</title>
+    <style>
+        
+        #canvas
+        {
+            border: 2px solid black;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>SmiLy</h1>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 800;
+        canvas.height = 600;
+        canvas.style.backgroundColor = 'black';
+        
+
+        ctx.fillStyle = 'yellow';
+        ctx.beginPath();
+        ctx.arc(400, 290, 200, 200, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(300, 200, 40, 40, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(300, 200, 10, 10, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+        ctx.arc(500, 200, 40, 40, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(500, 200, 10, 10, 0, 1);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.arc(400, 350, 100 ,0,  3.14, false);
+        ctx.fill();
+        ctx.closePath();
+        ctx.stroke();
+        
+//attempt at drawing line, 
+// Just close path first then add stroke to close the arc  
+        // ctx.strokeStyle = 'black';
+        // ctx.lineWidth = 10;
+        // ctx.beginPath();
+        // ctx.moveTo(0, 0);
+        // ctx.lineTo(400, 350);
+        // ctx.stroke();
+        // ctx.closePath();
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
