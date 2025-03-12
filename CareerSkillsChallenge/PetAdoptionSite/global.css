@@ -1,0 +1,268 @@
+body{
+    background-color: cadetblue;
+}
+#container{
+    max-width:1200px;
+    background-color: burlywood;
+    margin:auto;
+    padding:1rem;
+    position: relative;
+}
+#logo{
+    height:125px;
+    width:125px;
+    background-color: none;
+    position:absolute;
+    top:10px;
+    left:10px;
+
+    background-image: url(images-petAdoption/logo2.jpg);
+    background-size: contain;
+    border-radius: 50%;
+}
+#pageheader{
+    height:50px;
+    background-image: url(images-petAdoption/cats/large/);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(183, 139, 81);
+    text-align: center;
+    grid-area: header;
+    padding-bottom:2.5rem;
+}
+#mainnav{
+    height:50px;
+    background-color: beige;
+    grid-area: nav;
+}
+#mainnav ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    gap: 8rem;
+    justify-content: center;
+}
+#media{
+    height:300px;
+    background-color:none;
+    grid-area: media;
+    background-image: url(images-petAdoption/cat+dog/large/beagleCat.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#pagemain{
+    min-height:200px;
+    background-color:rgb(183, 139, 81);
+    grid-area: main;
+    color:rgb(238, 238, 238);
+    text-align: center; 
+    padding:0.5rem;
+}
+.card{
+    height:100px;
+    /* width:100px; */
+    background-color: darkgoldenrod;
+    /* display:inline-block; */
+    margin:10px;
+    border-radius: 1rem;
+}
+#card001{
+    grid-area: card001;
+    background-image: url(images-petAdoption/dogs/large/australianShepherd.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+}
+#card002{
+    grid-area:card002;
+    background-image: url(images-petAdoption/cats/large/3kittens.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card003{
+    grid-area:card003;
+    background-image: url(images-petAdoption/fish/large/aquarium-g7a29f4278_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card004{
+    grid-area:card004;
+    background-image: url(images-petAdoption/frogs/large/petFrog.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card005{
+    grid-area:card005;
+    background-image: url(images-petAdoption/birds/large/colorfulBird.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card006{
+    grid-area:card006;
+    background-image: url(images-petAdoption/rabbits/large/bunny.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card007{
+    grid-area:card007;
+    background-image: url(images-petAdoption/rodents/large/brown-hamster.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card008{
+    grid-area:card008;
+    background-image: url(images-petAdoption/snakes/large/greenSnake.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card009{
+    grid-area:card009;
+    background-image: url(images-petAdoption/spiders/large/antilles-pinktoe-tarantula-gccaabaab2_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#card010{
+    grid-area:card010;
+    background-image: url(images-petAdoption/turtles/large/turtleFace.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#pagefooter{
+    min-height:100px;
+    background-color: rgb(183, 139, 81);
+    grid-area: footer;
+}
+#pagefooter{
+    font-size: larger;
+}
+#pagefooter ul{
+    height:20px;
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    gap: 8rem;
+    justify-content: center;
+}
+#pagefooter p {
+    text-align: center;
+    color:rgb(238, 238, 238);
+}
+#pagefooter a{
+    color:rgb(238, 238, 238);
+}
+#subfooter{
+    height:200px;
+    background-color:beige;
+    grid-area: sf;
+    text-align: center;
+    border-radius: 0px 0px 25px 25px;
+    padding-top:1rem;
+}
+@media screen and (min-width:1024px)
+{
+    body{
+        background-color: darkolivegreen;
+    }
+    #container{
+        display:grid;
+        grid-template-areas:
+        "header header header header header"
+        "nav nav nav nav nav"
+        "media media media media media"
+        "main main main main main "
+        "card001 card002 card003 card004 card005"
+        "card006 card007 card008 card009 card010"
+        "footer footer footer footer footer"
+        "sf sf sf sf sf ";
+        }
+    #logo{
+        height:125px;
+        width:124px;
+    }
+    #pageheader{
+        color:white;
+        height:350px;
+        max-width:1200px;
+        background-image:url(images-petAdoption/cat+dog/large/cat-dog.jpg);
+        background-size:auto;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+    }
+    #mainnav{
+        height:50px;
+        background-color:transparent;
+        border-top:2px solid black;
+        /* border-bottom:2px solid black; */
+        padding:1rem;
+    }
+    #mainnav ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    gap: 8rem;
+    justify-content: center;
+}
+    #mainnav li{
+        min-width: 110px;
+        font-size: larger;
+        background-color: beige;
+        text-align: center;
+        border-radius: 3px 3px 3px 3px;
+    }
+    #mainnav li a{
+        color:brown;
+    }
+    #media{
+        height:500px;
+    }
+    #pagemain{
+        min-height:200px;
+        border-radius: 1rem;
+        margin-top:10px;
+        line-height: 1.3rem;
+    }
+    .card{
+        height:150px;
+    }
+    .card:hover{
+        padding:0.5rem;
+        transition-duration: 1s;
+    }
+    #pagefooter{
+        font-size: larger;
+    }
+    #pagefooter ul{
+        height:20px;
+        list-style-type: none;
+        display:flex;
+        flex-direction: row;
+        gap: 8rem;
+        justify-content: center;
+    }
+    #pagefooter p {
+        text-align: center;
+        color:rgb(238, 238, 238);
+    }
+    #pagefooter a{
+        color:rgb(238, 238, 238);
+    }
+    #subfooter{
+        height:130px;
+        color:#333;
+        text-align: center;
+        border-radius: 0px 0px 25px 25px;
+    }
+}

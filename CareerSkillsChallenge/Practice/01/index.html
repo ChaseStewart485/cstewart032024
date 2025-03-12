@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index - Practive 01</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        #container{
+            max-width:1000px;
+            background-color: burlywood;
+            margin:auto;
+            padding:2rem;
+        }
+        #pageheader{
+            height:150px;
+            background-color: brown;
+            text-align: center;
+            border:2px solid black;
+            grid-area: pgh;
+        }
+        nav{
+            height:150px;
+            background-color: brown;
+            text-align: center;
+            border:2px solid black;
+            grid-area: nav;
+        }
+        main{
+            height:150px;
+            background-color: brown;
+            text-align: center;
+            border:2px solid black;
+            grid-area:mn;
+        }
+        #media{
+            height:150px;
+            background-color: brown;
+            text-align: center;
+            border:2px solid black;
+            grid-area:media;
+        }
+        .card{
+            margin:10px;
+            background-color: brown;
+            
+        }
+        #one{
+            background-color: khaki;
+            border:2px solid black;
+            grid-area:one;
+        }
+        #two{
+            background-color: khaki;
+            border:2px solid black;
+            grid-area:two;
+        }
+        #three{
+            background-color: khaki;
+            border:2px solid black;
+            grid-area:three;
+        }
+        #four{
+            background-color: khaki;
+            border:2px solid black;
+            grid-area:four;
+        }
+        #subfooter{
+            height:150px;
+            background-color: brown;
+            text-align: center;
+            border:2px solid black;
+            grid-area:sf;
+        }
+        #mainfooter{
+            height:150px;
+            background-color: brown;
+            text-align: center;
+            border:2px solid black;
+            grid-area:mf;
+        }
+        
+        @media screen and (min-width:1024px)
+        {
+            #container{
+                display:grid;
+            grid-template-areas: 
+            "pgh pgh pgh pgh"
+            "nav nav nav nav"
+            "mn mn mn mn"
+            "media media media media"
+            "one two three four"
+            "sf sf sf sf"
+            "mf mf mf mf"
+            ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="pageheader"><h1>Practice Index</h1></header>
+        <nav>#nav</nav>
+        <main>#main</main>
+        <div id="media">#media</div>
+        <div class="card">
+            <div id="one">#01</div>
+            <div id="two">#02</div>
+            <div id="three">#03</div>
+            <div id="four">#04</div>
+        </div>
+        <footer id="subfooter">#subfooter</footer>
+        <footer id="mainfooter">mainfooter</footer>
+    </div>
+</body>
+</html>
