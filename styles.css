@@ -1,0 +1,360 @@
+:root{
+    --color-primary: rgb(0, 72, 255);
+    --color-secondary: silver;
+    --color-tertiary: rgb(27, 13, 129);
+}
+
+html {
+scroll-behavior: smooth;
+}
+body{
+    background-image: url(Images/Firefly\ a\ large\ image\ for\ a\ webpage\ that\ is\ a\ scenic\ foerst\ in\ the\ the\ early\ morining\ hours\ 7080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.container {
+/* background-color: white; */
+min-height: 12rem;
+max-width: 75rem;
+padding: 1rem 3rem 1rem 3rem;
+margin: auto;
+position: relative;
+/* border: 1px solid blue; */
+padding:1rem;
+font-size: larger;
+
+
+}
+#pageheader {
+/* background-color: coral; */
+/* background-color: var(--color-primary); */
+min-height: 150px;
+padding: 1rem;
+justify-content: space-between;
+/* background-color: rgba(165, 42, 42, 0.7); */
+}
+#IMGS{
+    /* background-image: url(Images/Firefly\ a\ large\ image\ for\ a\ webpage\ that\ is\ a\ scenic\ foerst\ in\ the\ the\ early\ morining\ hours\ 7080.jpg);  */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    /* background-image: ; */
+    
+} 
+
+
+
+#logo {
+background-color: rgb(97, 4, 4);
+border:2px solid rgb(171, 29, 29);
+width: 150px;
+height: 150px;
+border-radius: 50%;
+position: absolute;
+left: calc(50% - 75px);
+transition: all 2s;
+
+background-image: url(Images/Firefly-logo-with-sunset-behind-mountain-range\,-with-a-partially-cloudy-sky\,-with-the-name-Chase-888.png);
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+#pagenav {
+/* background-color: rgb(90,127,174); */
+color:white;
+min-height: 40px;
+min-width: 300px;  
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+position: absolute;
+bottom: 0px;
+left: calc(50% - 178px);
+
+
+/* left: calc(50% - 154px); */
+/* justify-content: space-around; */
+}
+
+#navlink{
+    color:white;
+    text-decoration: none;
+    padding:1.5rem;
+}
+
+#navlink:hover{
+    color:brown;
+}
+
+h1
+{
+opacity: none;
+}
+#topnav {
+/* background-color: var(--color-primary); */
+min-height: 1rem; 
+width: 70%;
+margin: auto;
+padding: 1rem;
+text-align: center;
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+    background-color: rgba(165, 42, 42, 0.7);
+    /* padding:1rem; */
+    border-top:1px solid black;
+
+}
+
+.containernav {
+min-height: 2rem;
+/* background-color: rgb(187, 206, 212); */
+opacity: 90%;
+text-shadow: 1px 2px 3px rgb(0, 0, 0);
+font-size: large;
+}
+.navlinks a {
+    color: white;
+    font-size: large;
+    /* display:block;
+    justify-content:center;
+    color:white;
+    position: relative;
+    left:50%; */
+}
+#media {
+/* background-color: var(--color-tertiary); */
+min-height: 300px;
+padding: 0;
+text-align: center;
+
+text-shadow: 1px -1px 7px rgb(0, 0, 0);
+color:white;
+}
+
+#media h1{
+    text-align: center;
+    font-size: 3rem;
+}
+#media h2{
+    text-align: center;
+}
+#media blockquote{
+    background-color: none;
+    max-width: 50%;
+    margin: auto;
+}
+video{
+    width:50%;
+    height:auto;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border:2px solid darkred;
+    background-color: black;
+}
+
+/* Intro */
+#pagecontent {
+/* background-color: blue; */
+min-height: 200px;
+padding: 1rem;
+color:white;
+text-shadow: -1px 1px 3px grey;
+}
+
+#introtext {
+    text-align: center;
+}
+
+#pagecontent .background{
+    background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+}
+
+#career {
+/* background-color: blue;  */
+min-height: 200px;
+padding: 1rem;
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+
+}
+
+
+#semester1 {
+/* background-color: orange; */
+min-height: 200px;
+padding: 1rem;
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+
+}
+#semester1 a{
+    color:white;
+}
+#semester2 {
+/* background-color: orange; */
+min-height: 200px;
+padding: 1rem;
+/*display: none;*/ 
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+}
+#semester2 a{
+    color:white;
+}
+
+#keyassignments{
+    min-height: 200px;
+padding: 1rem;
+/* display:none ;  */
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+}
+
+#pagefooter {
+/* background-color: var(--color-primary); */
+min-height: 75px;
+padding: 1rem;
+/* text-align: center; */
+color:white;
+text-shadow: -1px 1px 3px grey;
+
+    background-color: rgba(165, 42, 42, 0.7);
+    padding:1rem;
+    border-top:1px solid black;
+
+}
+
+#pagefooter .container {
+min-height: 2rem;
+/* background-color: rgb(187, 206, 212); */
+opacity: 90%;
+text-shadow: 1px 2px 3px rgb(0, 0, 0);
+font-size: large;
+}
+
+#subfooter {
+/* background-color: orange; */
+min-height: 200px;
+background-color: rgba(165, 42, 42, 0.7);
+padding: 1rem;
+color:white;
+/* background-image: url(Images/Firefly\ line\ of\ fish\,\ fresh\ water\ fish\ 59474.jpg); */
+/* background-size: contain;
+background-repeat: no-repeat;
+background-position: center; */
+/* margin-top: 20px; */
+}
+
+.footerlinks{
+    width: 100px;
+    height:100px;
+    display:block;
+    /* justify-content:center; */
+    color:white;
+    position: relative;
+    left:50%;
+}
+
+#subImage {
+    max-width:200px;
+    max-height:200px;
+}
+
+.footerlinks a {
+    color:white;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#top{
+    width:20px;
+    height:20px;
+    background-color:darkred;
+    border:1px solid black;
+    padding:1rem;
+    text-align: center;
+    position: fixed;
+    border-radius: 50%;
+    right:23px;
+    bottom:20px;
+}
+#top a{
+    color:white;
+    text-decoration: none;
+}
+
+#btn,#btn2{
+            background-color: silver;
+            border:1px solid black;
+            width:300px;
+            margin:auto;
+            padding: 20px;
+            display:flex;
+            justify-content: space-evenly;
+        }
+
+/* a {
+padding: 1rem;
+} */
+
+/* Tablet and Desktop Styles */
+/* Use media queries to detect browser window size */
+@media screen and (min-width:768px)
+{
+    #flexsubfooter{
+        display:flex;
+        justify-content: space-between;
+    }
+    .footerlinks{
+        display:block;
+        min-width:200px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+#logo {
+left: 25px;
+}
+#media {
+height: 450px;
+}
+#pagenav {
+top: 0px;
+right: 0px;
+left: auto;
+bottom: auto;
+}
+#topnav{
+    width:50%;
+}
+.navlinks a {
+    color: white;
+    font-size: larger;
+}
+@media screen and (min-width: 1200px) {
+#media {
+height: 600px;
+    }
+}
+}
