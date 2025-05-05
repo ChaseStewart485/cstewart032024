@@ -1,0 +1,46 @@
+body{
+    background-color:lightblue;
+    background-image: url(images/IMG_1093\ copy.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+    width:510px;
+    background-color: rgba(251, 234, 53, 0.9);
+    color:white;
+    border-radius: 2rem;
+    text-align: center;
+    margin: auto;
+    
+    position: fixed;
+    left: 500px;
+}
+header a{
+    color:white;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+header h1{
+    text-shadow: 2px 2px 2px black;
+}
+header nav a{
+    background-color:rgba(210, 196, 47, 0.9) ;
+    padding:4px;
+    border-radius:1rem;
+}
+main{
+    margin:auto;
+    background-color: rgba(251, 234, 53, 0.9);
+    margin-top: 10rem;
+    padding:1rem;
+    line-height: 1.7;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main h2 a{
+    color:black;
+}
