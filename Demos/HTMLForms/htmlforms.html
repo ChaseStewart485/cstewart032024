@@ -106,10 +106,10 @@
 
     <fieldset>
         <legend>Select Element</legend>
-        <select name="themeselector" id="themeselector">
-        <option value="redtheme">Red Theme</option>
-        <option value="greentheme">Green Theme</option>
-        <option value="yellowtheme">Yellow Theme</option>
+        <select name="themeselector" id="themeselector" onchange="updateStylesheet()">
+        <option value="redtheme.css">Red Theme</option>
+        <option value="greentheme.css">Green Theme</option>
+        <option value="yellowtheme.css">Yellow Theme</option>
         </select>
 
         <br>
@@ -223,6 +223,43 @@
 
         
     });
+
+    let saveselectbutton; 
+    saveselectbutton = document.querySelector('#saveselectbutton');
+
+
+
+    let selStylesheet;
+selStylesheet = document.querySelector('#selstylesheet');
+
+// Select the link to external stylesheet
+let styleLink;
+styleLink = document.querySelector('#stylelink');
+//alert(styleLink);
+
+function updateStylesheet()
+{
+//alert(selStylesheet.value);
+styleLink.href = selStylesheet.value; // Update the href attribute of the link element
+
+// save to local storage
+localStorage.setItem('selectedStyleSheet1136', selStylesheet.value);
+
+}
+
+    window.addEventListener('load', function()
+        {
+            let savedStyleSheet = localStorage.getItem('selectedStyleSheet1136');
+            // alert(savedStyleSheet);
+
+            if(savedStyleSheet !== null)
+            {
+                // link to saved style sheet
+                styleLink.href = savedStyleSheet;
+                // match the drop down box 
+                selStylesheet.value = savedStyleSheet;
+            }
+        });
 
 
     </script>
