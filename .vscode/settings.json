@@ -1,5 +1,6 @@
 {
     "workbench.iconTheme": "vscode-icons",
     "liveServer.settings.CustomBrowser": "chrome",
-    "workbench.externalBrowser": "chrome"
+    "workbench.externalBrowser": "chrome",
+    "liveServer.settings.port": 5501
 }
