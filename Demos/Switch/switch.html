@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Switch - letter grades</h1>
+
+    <script>
+        // random number - roll dice
+
+        let rollResult;
+        rollResult = Math.floor(Math.random() *6 ) +1;
+        console.log(rollResult);
+
+        // switch statement 
+        // switch: take a single value and give a choice 
+        switch(rollResult)
+        {
+            case 1:
+                console.log("you rolled a one");
+                break;
+            case 2:
+                console.log("You rolled a two");
+                break;
+            case 3:
+                console.log("You rolled a three");
+                break;
+            case 4:
+                console.log("You rolled a four");
+                break;
+            case 5:
+                console.log("You rolled a five");
+                break;
+            case 6:
+                console.log("You rolled a six");
+                break;
+            default:
+                console.log("Your Roll is not a one or two");
+                break;
+
+
+
+        }
+
+
+
+        // letter grade generator
+        let gradePrecentageHistory;
+        let gradePrecentageEnglish;
+        let gradePrecentagePE;
+
+        gradePrecentageHistory = Math.floor(Math.random() *100 ) +1; 
+        gradePrecentageEnglish = Math.floor(Math.random() *100 ) +1; 
+        gradePrecentagePE = Math.floor(Math.random() *100 ) +1; 
+
+        console.log(`History Percentage ${gradePrecentageHistory}`);
+        console.log(`English Percentage ${gradePrecentageEnglish}`);
+        console.log(`PE Percentage ${gradePrecentagePE}`);
+
+        // If statement solution for letter grades
+        if(gradePrecentageHistory >= 90)
+        {
+            console.log("You got an A in History!");
+        }
+        else if(gradePrecentageHistory >=80)
+        {
+            console.log("You got a B in History!");
+        }
+        else if(gradePrecentageHistory >=70)
+        {
+            console.log("You got a C in History!");
+        }
+        else if(gradePrecentageHistory >=60)
+        {
+            console.log("You got a D in History!");
+        }
+        else 
+        {
+            console.log("You got a F in History!");
+        }
+
+
+        // Switch ____________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
