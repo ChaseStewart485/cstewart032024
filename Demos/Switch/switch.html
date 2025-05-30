@@ -17,35 +17,6 @@
 
         // switch statement 
         // switch: take a single value and give a choice 
-        switch(rollResult)
-        {
-            case 1:
-                console.log("you rolled a one");
-                break;
-            case 2:
-                console.log("You rolled a two");
-                break;
-            case 3:
-                console.log("You rolled a three");
-                break;
-            case 4:
-                console.log("You rolled a four");
-                break;
-            case 5:
-                console.log("You rolled a five");
-                break;
-            case 6:
-                console.log("You rolled a six");
-                break;
-            default:
-                console.log("Your Roll is not a one or two");
-                break;
-
-
-
-        }
-
-
 
         // letter grade generator
         let gradePrecentageHistory;
@@ -86,6 +57,51 @@
         // Switch ____________________________________________________________________
 
 
+        switch(rollResult)
+        {
+            case 1:
+                console.log("you rolled a one");
+                break;
+            case 2:
+                console.log("You rolled a two");
+                break;
+            case 3:
+                console.log("You rolled a three");
+                break;
+            case 4:
+                console.log("You rolled a four");
+                break;
+            case 5:
+                console.log("You rolled a five");
+                break;
+            case 6:
+                console.log("You rolled a six");
+                break;
+            default:
+                console.log("Your Roll is not a one or two");
+                break;
+        }
+
+        // Calculate English letter Grade
+
+        switch(true)
+        {
+            case gradePrecentageEnglish >= 90:
+                console.log("You got an A in English");
+                break;
+            case gradePrecentageEnglish >= 80:
+                console.log("You got an B in English");
+                break;
+            case gradePrecentageEnglish >= 70:
+                console.log("You got an C in English");
+                break;
+            case gradePrecentageEnglish >= 60:
+                console.log("You got an D in English");
+                break;
+            default:
+                console.log("You got an F in English");
+                break;
+        }
 
 
 
